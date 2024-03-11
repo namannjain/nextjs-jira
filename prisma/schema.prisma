@@ -78,8 +78,8 @@ model Comment {
 model User {
   id            String  @id @default(cuid())
   name          String
-  email         String
-  emailVerified Boolean
+  email         String @unique
+  emailVerified Boolean?
   image         String?
 
   comments        Comment[]
